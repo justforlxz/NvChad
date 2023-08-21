@@ -56,6 +56,7 @@ M.mason = {
 
     -- python stuff
     "python-lsp-server",
+    "black",
   },
 }
 

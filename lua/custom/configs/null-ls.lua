@@ -12,6 +12,10 @@ local sources = {
 
   -- bash
   b.formatting.shfmt,
+
+  b.formatting.clang_format,
+
+  b.formatting.black,
 }
 
 null_ls.setup {
