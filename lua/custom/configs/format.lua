@@ -1,5 +1,5 @@
 local M = {}
-local format_on_save = true
+local format_on_save = false
 
 function M.enable_format_on_save()
   local opts = { pattern = "*", timeout = 1000 }
