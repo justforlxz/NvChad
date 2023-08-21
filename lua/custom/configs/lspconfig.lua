@@ -105,3 +105,15 @@ lspconfig.clangd.setup {
     },
   },
 }
+
+if vim.fn.executable("qmlls") then
+  lspconfig.qmlls.setup {
+    cmd = { "qmlls6" },
+    filetypes = { "qmljs" },
+    root_dir = function(fname)
+      return lspconfig.util.find_git_ancestor(fname)
+    end,
+    single_file_support = true,
+    on_attach = on_attach,
+  }
+end
