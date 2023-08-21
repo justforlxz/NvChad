@@ -14,6 +14,7 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "qmljs",
+    "python",
   },
   indent = {
     enable = true,
