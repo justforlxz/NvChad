@@ -43,6 +43,11 @@ local plugins = {
     opts = overrides.nvterm,
   },
 
+  {
+    "hrsh7th/nvim-cmp",
+    opts = overrides.cmp,
+  },
+
   -- Install a plugin
   {
     "max397574/better-escape.nvim",
