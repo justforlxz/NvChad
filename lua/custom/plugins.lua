@@ -157,6 +157,10 @@ local plugins = {
         post_hook = nil, -- Function to run after the scrolling animation ends
       })
     end,
+  },
+  {
+    'mrjones2014/smart-splits.nvim',
+    build = './kitty/install-kittens.bash',
   }
   -- To make a plugin not be loaded
   -- {
