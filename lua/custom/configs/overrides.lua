@@ -95,7 +95,7 @@ M.nvterm = {
 
 M.cmp = {
   sources = {
-    { name = "copilot" },
+    { name = "codeium" },
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },

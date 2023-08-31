@@ -45,6 +45,7 @@ local plugins = {
 
   {
     "hrsh7th/nvim-cmp",
+    commit = "6c84bc75c64f778e9f1dcb798ed41c7fcb93b639",
     opts = overrides.cmp,
   },
 
@@ -82,18 +83,15 @@ local plugins = {
   },
 
   {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
+    "jcdickinson/codeium.nvim",
     event = "InsertEnter",
-    config = require "custom.configs.copilot",
     dependencies = {
-      {
-        "zbirenbaum/copilot-cmp",
-        config = function(_, opts)
-          require("copilot_cmp").setup(opts)
-        end,
-      },
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
     },
+    config = function(_, opts)
+      require("codeium").setup(opts)
+    end,
   },
 
   {
