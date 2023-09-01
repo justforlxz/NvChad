@@ -1,4 +1,4 @@
-local on_attach = require("plugins.configs.lspconfig").on_attach
+local default_on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
@@ -18,6 +18,12 @@ local servers = {
   "yamlls",
   "sqlls",
 }
+
+function on_attach(client, bufnr)
+  default_on_attach(client, bufnr)
+  client.server_capabilities.documentFormattingProvider = true
+  client.server_capabilities.documentRangeFormattingProvider = true
+end
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
